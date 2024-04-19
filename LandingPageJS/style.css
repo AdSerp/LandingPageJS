@@ -1,0 +1,92 @@
+:root {
+
+    /* BRANDING COLOR */
+--HeroColor: #170453;
+--MainColor: rgba(32,33,36,1);
+--Buttons: #ff6000;
+--MainProductBGColor: rgb(189,193,198);
+--BodyBGC: #fff;
+/* ---- OTROS STYLES QUE AÑADIR ---- */
+/* box-shadow: rgb(51, 51, 51) 0px -4px 0px inset; */
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-size: 20px;
+   line-height: 18.4px;
+   font-weight: 400;
+   font-family:  Open, sans-serif;
+}
+
+body{
+  width: 100svw;
+  overflow-x: hidden;
+}
+header{
+ position: sticky;
+}
+
+.burger img {
+width: 40px;
+display: none;
+}
+nav{
+   position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 125px;
+  background-color: #1231;
+  margin: auto 10px ;
+}
+
+nav > a > img{
+width: 150px;
+
+}
+
+input{
+ width: 600px;
+ height: 50px;
+}
+.search-bar {
+  display: flex;
+  border: solid 2px rgb(255, 252, 252);
+ 
+}
+form {
+ display: inherit;
+
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+}
+nav > ul > li {
+  color: black;
+  list-style: none;
+  text-decoration: none;
+}
+nav > ul > li:hover{
+ background-color: #1321;
+ padding: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.eslogan {
+ width: 100%;
+ height: 100px;
+ display: flex;
+ align-items: center;
+ justify-content:center;
+ border-bottom: 1px solid gray;
+
+}
