@@ -42,6 +42,26 @@
 </div>
     </header>
 
+    <div class="container">
+        <section class="filter filter-sellers">
+          <h2>Filtrar por vendedor</h2>
+          <select id="sellerSelect" title="seller">
+            <option value="all">PcComponentes</option>
+            
+          </select>
+        </section>
+       <!--FILTRAR POR RANGO DE PRECIOS-->
+        <section class="filter filter-price">
+            <h2>FILTRAR POR PRECIO</h2>
+            <label for="minPrice">Precio mínimo:</label>
+            <input type="number" id="minPrice">
+            <label for="maxPrice">Precio máximo:</label>
+            <input type="number" id="maxPrice">
+            <button id="filterButton">Filtrar</button>
+        </section>
+        <section class="products">
+          </section>
+      </div>
    
    
    <script src="./main.js"></script>

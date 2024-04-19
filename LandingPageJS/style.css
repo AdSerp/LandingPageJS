@@ -90,3 +90,25 @@ a{
  border-bottom: 1px solid gray;
 
 }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .filter {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+  
+  .products {
+    width: 70%;
+  }
+  
+  .product {
+    
+  }
+  
+  .product:hover {
+   background-color: #1321;
+   padding: 10px;
+  }
