@@ -17,9 +17,11 @@
    font-family:  Open, sans-serif;
 }
 
+
 body{
+  height: 100svh;
   width: 100svw;
-  overflow-x: hidden;
+  overflow-x:scroll;
 }
 header{
  position: sticky;
@@ -46,9 +48,9 @@ width: 150px;
 
 }
 
-input {
+nav input {
  width: 100%;
- height: 50px;
+ height: 60px;
 }
 .search-bar {
   display: flex;
@@ -89,25 +91,27 @@ a{
 
 }
 .container {
-  display:flex ;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   width: 24vw;
-  height: 100vh;
+  height: 1300px;
   padding: 10px;
   margin-right: 10px;
 
   background-color: #e6e6e6;
   background-color: RGBA(234, 234, 234, 0.5);
   flex-wrap: wrap;
-  text-align: center;
+   
   padding-bottom: 100vh; 
 }
 
 
 
-  .filter {
-    width: 20%;
-    height: 100%;
+  .filter .brands .button{
     margin: 30px;
+width: 100px;
+height: 100svh;
   }
  
 
@@ -116,22 +120,26 @@ a{
   flex-wrap: wrap;
   width: 80vw;
   height: 100%;
-  padding: 40px;
+ 
 }
 .card{
+  align-items: center;
+  display: grid;
+  text-align: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+  height: 100%;
+  background-color: #e6e6e66b;
+  border-radius: 12px;
   padding: 30px;
-}
-.card:hover {
-  background-color: #e6e6e6;
-  background-color: RGBA(234, 234, 234, 0.5);
-  transition: .5s;
-  padding: 1.5px;
+  margin: 10px;
 }
 
 main {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 #minPrice, #maxPrice {
@@ -142,11 +150,14 @@ main {
 
 .filter h2, .filter label, .filter select, .filter option, .filter input {
   padding: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   width: 12vw;
+  margin-top:10px;
   
 }
-
+.filterCheckbox {
+  height: 23px;
+}
 
 button {
   border-radius: 6px 6px ;
@@ -161,3 +172,39 @@ button:hover {
   margin: 1px;
 }
 
+.brand-filter input{
+  display: block;
+  width: auto  ;
+  }
+  .filter-submit{
+    position:relative;
+    top:80px ;
+    left:-40px;
+  }
+
+  .product {
+    margin: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin-bottom: 00px;
+  background-color: #e6e6e6;
+  height: 90%;
+  width: 90%;
+  border-radius: 15px;
+  
+  }
+
+  .product img {
+  
+    max-width: 60%;
+  }
+
+ .filtro{
+  display: none;
+ }
+
+ section {
+  height: 100svh;
+ 
+ }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="Assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,177 +44,46 @@
     </header>
     
     <main>
-
+ 
     <aside class="container">
-        <div class="filter filter-sellers">
-          <h2>Filtrar por vendedor</h2>
+        <!--BUSCADOR-->
+        <div class="filter search-filter">
+          <input name="seachfilter" id="searchfilter" type="text" placeholder="Buscar...">  
+          
+        </div>
+        <!--FILTRAR POR VENDEDOR-->
+        <div class="filter seller-filter">
+          
           <select id="sellerSelect" title="seller">
             <option value="all">PcComponentes</option>
-            
-          </div>
+        </div>
         
        <!--FILTRAR POR RANGO DE PRECIOS-->
-        <div class="filter filter-price">
+        <div class="filter price-filter">
             <h2>FILTRAR POR PRECIO</h2>
-            <label  for="minPrice">Precio mínimo:</label>
-            <input type="number" id="minPrice" min="0" placeholder="0">
-            <label for="maxPrice">Precio máximo:</label>
-            <input type="number" id="maxPrice" min="10" placeholder="10">
-            <button id="filterButton">Filtrar</button>
+            <div>
+                <input type="checkbox" name="higher" id="higher">
+                <label for="higher"> >1000 </label>
+                <input type="checkbox" name="medium" id="medium">
+                <label for="medium"> 500-1000</label>
+                <input type="checkbox" name="low" id="low" title="low">
+                <label for="low"> 0-500 </label>
+            </div>
+            
         </div>
+
+   
+                                
+
+    
+   
     </aside>
         <section class="card-container">
             <div class="card">
-                <div class="card-body"> 
-                <img src="https://thumb.pccomponentes.com/w-150-150/articles/1067/10674386/1136-pccom-revolt-4050-intel-core-i5-13500h-16gb-500gb-ssd-rtx-4050-156-windows-11-home-comprar.jpg" alt="Revolt">
-                </div>
-                <div class="item">
-                    <h5>PcComp Revolt 4050</h5>
-                </div>
-                <div class="item-data">
-                    <p class="precio">1.149€</p>
-                    <p class="rate">⭐️⭐️⭐️⭐️</p>
-                    <p class="reviews">reviews: 9</p>
-                    <p class="vendedor">Vendido por: PcComponentes</p>
-                </div>
-            </div>
+                
 
-            <div class="card">
-                <div class="card-body"> 
-                <img src="https://thumb.pccomponentes.com/w-150-150/articles/1073/10733260/1738-hp-15-fc0084ns-amd-ryzen-3-7320u-8gb-256gb-ssd-156.jpg" alt="HP15">
-                </div>
-                <div class="item">
-                    <h5> HP 15-fc0084ns </h5>
-                </div>
-                <div class="item-data">
-                    <p class="precio">399€</p>
-                    <p class="rate">⭐️⭐️⭐️⭐️</p>
-                    <p class="reviews">reviews:4 </p>
-                    <p class="vendedor">Vendido por: PcComponentes</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body"> 
-                <img src="https://thumb.pccomponentes.com/w-150-150/articles/1081/10811721/1389-asus-vivobook-15-f1504va-nj766w-intel-core-i7-1355u-16gb-1tb-ssd-156.jpg" alt="VivoBook">
-                </div>
-                <div class="item">
-                    <h5>Asus VivoBook 15</h5>
-                </div>
-                <div class="item-data">
-                    <p class="precio">899€</p>
-                    <p class="rate">⭐️⭐️⭐️⭐️⭐️</p>
-                    <p class="reviews">reviews: 2</p>
-                    <p class="vendedor">Vendido por: PcComponentes</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body"> 
-                <img src="https://thumb.pccomponentes.com/w-150-150/articles/1081/10815580/1603-hp-15s-eq2189ns-amd-ryzen-5-5500u-16gb-1tb-ssd-156.jpg" alt="HP15s">
-                </div>
-                <div class="item">
-                    <h5> HP 155-EQ2189NS</h5>
-                </div>
-                <div class="item-data">
-                    <p class="precio">499€</p>
-                    <p class="rate">⭐️⭐️⭐️⭐️⭐️</p>
-                    <p class="reviews">reviews: 5</p>
-                    <p class="vendedor">Vendido por: PcComponentes</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body"> 
-                <img src="https://thumb.pccomponentes.com/w-150-150/articles/1072/10723717/1524-lenovo-thinkbook-15-g4-aba-amd-ryzen-5-5625u-8gb-256gb-ssd-156.jpg " alt="thinkbook15">
-                </div>
-                <div class="item">
-                    <h5>Lenovo thinkbook15  </h5>
-                </div>
-                <div class="item-data">
-                    <p class="precio">488€</p>
-                    <p class="rate">⭐️⭐️⭐️⭐️</p>
-                    <p class="reviews">reviews: 9</p>
-                    <p class="vendedor">Vendido por: PcComponentes</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body"> 
-                <img src="https://thumb.pccomponentes.com/w-150-150/articles/1082/10824932/1657-lenovo-ideapad-slim-3-15ian8-intel-core-i3-n305-8gb-256-gb-ssd-156-efaed2d8-acff-425c-b265-45be566bdeb9.jpg" alt="Ideapad3">
-                    </div>
-                <div class="item">
-                    <h5>Lenovo Ideapad3</h5>
-                </div>
-                <div class="item-data">
-                    <p class="precio">488€</p>
-                    <p class="rate">⭐️⭐️⭐️⭐️</p>
-                    <p class="reviews">reviews: 25</p>
-                    <p class="vendedor">Vendido por: PcComponentes</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body"> 
-                <img src="https://thumb.pccomponentes.com/w-150-150/articles/1082/10820056/1908-msi-creator-m16-hx-c14vfg-282es-intel-core-i9-14900hx-64gb-2tb-ssd-rtx-4060-16.jpg" alt="MSI creator">
-                </div>
-                <div class="item">
-                    <h5>MSI creator m16hx</h5>
-                </div>
-                    <div class="item-data">
-                    <p class="precio">2198.99€</p>
-                    <p class="rate">⭐️⭐️⭐️⭐️⭐️</p>
-                    <p class="reviews">reviews: 1</p>
-                    <p class="vendedor">Vendido por: PcComponentes</p>
-                </div>
-            </div>
-            
-
-            <div class="card">
-                <div class="card-body"> 
-                <img src="https://thumb.pccomponentes.com/w-150-150/articles/1064/10644272/127-razer-blade-18-qhd-240hz-intel-core-i9-13950hx-32gb-1tb-ssd-rtx-4080-18.jpg" alt="RazerBlade18">
-                </div>
-                <div class="item">
-                    <h5> Razer Blade 18</h5>
-                </div>
-                <div class="item-data">
-                    <p class="precio">4399€</p>
-                    <p class="rate">⭐️⭐️⭐️⭐️⭐️</p>
-                    <p class="reviews">reviews: 3</p>
-                    <p class="vendedor">Vendido por: PcComponentes</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body"> 
-                <img src="https://thumb.pccomponentes.com/w-150-150/articles/1074/10740197/1232-alurin-flex-advance-intel-core-i5-1155g7-16gb-1tb-ssd-14-windows-11-home-comprar.jpg" alt="Alurin">
-                </div>
-                <div class="item">
-                    <h5>  Alurin Flex Advance</h5>
-                </div>
-                <div class="item-data">
-                    <p class="precio">755€</p>
-                    <p class="rate">⭐️⭐️⭐️⭐️</p>
-                    <p class="reviews">reviews: 4</p>
-                    <p class="vendedor">Vendido por: PcComponentes</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body"> 
-                <img src="https://thumb.pccomponentes.com/w-150-150/articles/1070/10708329/1667-samsung-galaxy-book3-ultra-intel-evo-core-i9-13900h-32gb-1tb-ssd-rtx-4070-16.jpg" alt="GalaxyBook3">
-                </div>
-                <div class="item">
-                    <h5>PcComp Revolt 4050</h5>
-                </div>
-                    <div class="item-data">
-                    <p class="precio">3698€</p>
-                    <p class="rate">⭐️⭐️⭐️⭐️⭐️</p>
-                    <p class="reviews">reviews: 1</p>
-                    <p class="vendedor">Vendido por: PcComponentes</p>
-                </div>
-            </div>
-               
+             
+             </div>  
         </section>
         
         </main>
