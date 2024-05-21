@@ -1,6 +1,3 @@
-
-
-
 const products = [
   {
       name: 'PcCom Revolt',
@@ -86,10 +83,10 @@ const products = [
                               image:"https://thumb.pccomponentes.com/w-150-150/articles/1074/10740197/1232-alurin-flex-advance-intel-core-i5-1155g7-16gb-1tb-ssd-14-windows-11-home-comprar.jpg",
                               price:599,
                               
-                              },
-  {
-                                  name:"Samsung Galaxy Book3 Ultra",
-                                  price:3698,
+                            },
+                            {
+                              name:"Samsung Galaxy Book3 Ultra",
+                              price:3698,
                                   stars:"⭐⭐⭐⭐⭐",
                                   reviews:1,
                                   seller:"PcComponentes",
@@ -98,21 +95,40 @@ const products = [
                                   },
                                   
   ];
+const searchBar = document.getElementById('searchfilter')
+const productsContainer = document.querySelector('.card-container')
+const productsSection =  document.querySelector('.card')
+const priceFilterButton = document.getElementById('btn')
 
-  function filteredProducts( ){
-    const productsContainer = document.querySelector('card-container')
-    const productsSection =  document.querySelector('.card')
-    
+//  FILTER //
+
+let maxPrice = 1000;
+ const productFilter = () => {
+ const isFilteredProduct = products.filter(product => product.price > maxPrice);
+ filteredProducts(isFilteredProduct);
+}
+ priceFilterButton.addEventListener('click', productFilter);
+ filteredProducts(products);
+// SEARCH FILTER //
+
+const searchProducts = () => {
+  const query = searchBar.value.toLowerCase();
+
+}
+
+// PRODUCT CARDS // 
+  function filteredProducts(array ){
+
+    productsSection.innerHTML = ''
   
-// PRODUCT CARDS //
-  products.forEach((product) => {
+   array.forEach((product) => {
 const productContainer = document.createElement('div')
 const productDiv  = document.createElement('div')
-productContainer.className = 'cardcontainer'
+productContainer.className = 'card-container'
 productDiv.className = 'product'
 
 const productHTML = `
-<img src="${product.image}" alt="${product.name}"
+<img src="${product.image}" alt="${product.name}">  
 <h3> ${product.name} </h3>
 <p> Precio: ${product.price} </p>
 <p> Rate: ${product.stars} </p>
@@ -120,30 +136,11 @@ const productHTML = `
 <p> Seller: ${product.seller} </p>
 
 `
+
 productDiv.innerHTML = productHTML;
-productsSection.appendChild(productDiv)
+productsSection.append(productDiv)
   })
-}
+} 
 
-filteredProducts();
+filteredProducts(products);
 
-// CHECKBOX FILTER //
-
-function checkboxFilter(){
-  if(document.getElementById('#low').checked){
-    if(product.price > 500){
-    products.hide;
-    }
-  }
-   };
-
-   // SEARCH FILTER //
-   document.addEventListener("keyup", search => {
-   if (search.target.matches('#searchfilter')){
-    document.querySelectorAll(".card").forEach(laptop => {
-      laptop.textContent.toLowerCase().includes(search.target.value.toLowerCase())
-      ?laptop.classList.remove("filtro")
-      :laptop.classList.add("filtro")
-    })
-   }
-     })
